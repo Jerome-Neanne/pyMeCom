@@ -110,7 +110,6 @@ class MeerstetterTEC(object):
         return self._set_enable(False)
         
 def setPeltierTempImmediate(serial_hwid, tempTarget, configFile = "UNKNOWNconfFile.ini"):
-    #port = connectSerialPort.connect_serial(serial_hwid)
     port = connectSerialPort.get_serial_port(serial_hwid)
     if serial_hwid  == serial_hwid_default:
         serial_hwid = connectSerialPort.get_serial_hwid_by_port(port)
@@ -128,7 +127,6 @@ def setPeltierTempImmediate(serial_hwid, tempTarget, configFile = "UNKNOWNconfFi
     return ret
 
 def setPeltierTemp(serial_hwid, tempTarget, configFile = "UNKNOWNconfFile.ini"):
-    #port = connectSerialPort.connect_serial(serial_hwid)
     port = connectSerialPort.get_serial_port(serial_hwid)
     if serial_hwid  == serial_hwid_default:
         serial_hwid = connectSerialPort.get_serial_hwid_by_port(port)
@@ -166,7 +164,6 @@ def setPeltierTemp(serial_hwid, tempTarget, configFile = "UNKNOWNconfFile.ini"):
     return stable
     
 def readPeltierTemp(serial_hwid, tempTarget, configFile = "UNKNOWNconfFile.ini"):
-    #port = connectSerialPort.connect_serial(serial_hwid)
     port = connectSerialPort.get_serial_port(serial_hwid)
     if serial_hwid  == serial_hwid_default:
         serial_hwid = connectSerialPort.get_serial_hwid_by_port(port)
